@@ -1,0 +1,8 @@
+{
+	"name": "com.izaakschroeder.interval-tree-clock",
+	"version": "0.0.1",
+	"main": "itc.js",
+	"dependencies": {
+		"amdefine": ">=0.0.2"
+	}
+}
