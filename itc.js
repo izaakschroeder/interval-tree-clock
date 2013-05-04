@@ -242,10 +242,14 @@ define(function() {
 	}
 
 	Stamp.prototype.sync = function(s2) {
+		if (s2 instanceof Stamp === false)
+			throw new TypeError("Must sync with another stamp");
 		return Stamp.join(this, s2).fork();
 	}
 
 	Stamp.prototype.receive = function(s2) {
+		if (s2 instanceof Stamp === false)
+			throw new TypeError("Must receive with another stamp");
 		return Stamp.join(this, s2).trigger();
 	}
 
